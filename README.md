@@ -27,24 +27,26 @@ Repositori ini berisi hasil pengerjaan UTS Data Mining dengan studi kasus predik
 
 ## Deskripsi Dataset
 
-Dataset yang digunakan adalah Wine Quality Dataset yang berisi fitur-fitur kimiawi dari sampel anggur merah dan putih. Variabel target yang diprediksi adalah `quality`, yaitu nilai kualitas anggur pada skala 0 hingga 10.
+Dataset yang digunakan adalah Wine Quality Dataset yang bersumber dari UCI Machine Learning Repository. Dataset ini berisi hasil pengukuran senyawa kimiawi dari sampel anggur merah (red wine) dan anggur putih (white wine) beserta skor kualitas yang diberikan oleh panel penguji bersertifikat. Variabel target yang diprediksi adalah `quality`, yaitu nilai kualitas anggur pada skala 0 hingga 10.
+
+Data training yang digunakan dalam proyek ini terdiri dari 857 sampel dengan distribusi kelas yang tidak seimbang, di mana sebagian besar sampel berada pada kelas kualitas menengah (quality 5 dan 6). Data testing terdiri dari 286 sampel tanpa label quality yang harus diprediksi.
 
 ### Fitur yang Digunakan
 
-| Fitur | Deskripsi |
-|---|---|
-| fixed acidity | Kadar asam tetap (g/dm3) |
-| volatile acidity | Kadar asam volatil (g/dm3) |
-| citric acid | Kadar asam sitrat (g/dm3) |
-| residual sugar | Kadar gula sisa setelah fermentasi (g/dm3) |
-| chlorides | Kadar garam klorida (g/dm3) |
-| free sulfur dioxide | SO2 bebas (mg/dm3) |
-| total sulfur dioxide | Total SO2 bebas dan terikat (mg/dm3) |
-| density | Kepadatan anggur (g/cm3) |
-| pH | Tingkat keasaman |
-| sulphates | Kadar sulfat sebagai aditif antimikroba (g/dm3) |
-| alcohol | Kadar alkohol (% volume) |
-| quality | Nilai kualitas anggur - variabel target (0-10) |
+| Fitur | Deskripsi | Penjelasan |
+|---|---|---|
+| fixed acidity | Kadar asam tetap (g/dm3) | Kadar asam tetap, umumnya berupa asam tartarat. Asam ini tidak mudah menguap dan memberikan rasa segar (tart) pada anggur. Kadar yang terlalu tinggi dapat membuat rasa terlalu asam dan tajam. |
+| volatile acidity | Kadar asam volatil (g/dm3) | Kadar asam volatil, terutama asam asetat. Kadar yang tinggi dapat menyebabkan aroma dan rasa seperti cuka yang tidak diinginkan, sehingga berpengaruh negatif terhadap kualitas anggur. |
+| citric acid | Kadar asam sitrat (g/dm3) | Kadar asam sitrat. Dalam jumlah kecil, asam sitrat dapat menambah kesegaran dan kompleksitas rasa. Kadarnya pada anggur umumnya sangat rendah karena sebagian besar difermentasi oleh bakteri. |
+| residual sugar | Kadar gula sisa setelah fermentasi (g/dm3) | Kadar gula yang tersisa setelah proses fermentasi selesai. Nilai rendah menandakan anggur kering (dry wine), sedangkan nilai tinggi menandakan anggur manis (sweet wine). Kadar di atas 45 g/dm3 dianggap sangat manis. |
+| chlorides | Kadar garam klorida (g/dm3) | Kadar garam (natrium klorida) dalam anggur. Kadar klorida yang terlalu tinggi dapat memberikan rasa asin yang tidak diinginkan dan mengindikasikan kontaminasi atau proses produksi yang kurang baik. |
+| free sulfur dioxide | SO2 bebas (mg/dm3) | Kadar SO2 dalam bentuk bebas (tidak terikat). SO2 bebas berfungsi sebagai antimikroba dan antioksidan untuk menjaga kesegaran anggur. Kadar yang tepat diperlukan agar tidak merusak aroma dan rasa. |
+| total sulfur dioxide | Total SO2 bebas dan terikat (mg/dm3) | Total keseluruhan SO2, mencakup bentuk bebas dan yang sudah terikat dengan senyawa lain. Regulasi pangan di berbagai negara membatasi kadar total SO2 pada produk anggur komersial. |
+| density | Kepadatan anggur (g/cm3) | Kepadatan cairan anggur. Kepadatan berkaitan erat dengan kadar gula dan alkohol; anggur dengan kadar gula tinggi umumnya memiliki densitas lebih tinggi, sedangkan kadar alkohol tinggi menurunkan densitas. |
+| pH | Tingkat keasaman | Ukuran keasaman atau kebasaan pada skala 0-14. Sebagian besar anggur memiliki pH antara 3 dan 4. Nilai pH yang lebih rendah berarti anggur lebih asam, yang memengaruhi stabilitas, warna, dan rasa. |
+| sulphates | Kadar sulfat sebagai aditif antimikroba (g/dm3) | Kadar kalium sulfat, yang berfungsi sebagai aditif antimikroba dan antioksidan. Sulphates berkontribusi pada kadar SO2 dalam anggur dan secara umum berpengaruh positif terhadap kualitas dalam batas wajar. |
+| alcohol | Kadar alkohol (% volume) | Persentase kadar alkohol dalam anggur. Alkohol dihasilkan dari proses fermentasi gula oleh ragi. Kadar alkohol yang lebih tinggi umumnya berkorelasi positif dengan kualitas anggur yang lebih baik. |
+| quality | Nilai kualitas anggur - variabel target (0-10) | Skor kualitas anggur berdasarkan penilaian panel ahli (wine tasters) bersertifikat. Nilai 0 merupakan kualitas terburuk dan 10 adalah kualitas terbaik. Variabel ini merupakan target prediksi. |
 
 ---
 
