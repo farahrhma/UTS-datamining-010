@@ -1,6 +1,12 @@
 # Wine Quality Classification - UTS Data Mining
 
-Repositori ini berisi hasil pengerjaan UTS Data Mining dengan studi kasus prediksi kualitas anggur menggunakan pendekatan machine learning. Model dibangun dari data training, dievaluasi, kemudian digunakan untuk memprediksi kualitas anggur pada data testing yang tidak memiliki label.
+## Pendahuluan
+Kualitas anggur merupakan salah satu faktor kritis dalam industri minuman yang secara tradisional dinilai melalui proses pengujian organoleptik oleh para ahli (wine tasters). Proses penilaian tersebut bersifat subjektif, membutuhkan keahlian khusus, dan tidak efisien untuk dilakukan dalam skala besar. Seiring berkembangnya teknologi analisis kimiawi, kini dimungkinkan untuk mengukur berbagai senyawa kimia dalam anggur secara objektif dan terstandarisasi.
+Dalam konteks tersebut, pendekatan machine learning menawarkan solusi yang lebih skalabel dan objektif. Dengan memanfaatkan data fitur kimiawi yang terukur, sebuah model klasifikasi dapat dilatih untuk mempelajari pola hubungan antara komposisi kimiawi anggur dan skor kualitasnya, sehingga penilaian kualitas dapat dilakukan secara otomatis tanpa bergantung sepenuhnya pada penilaian manusia.
+Proyek ini merupakan bagian dari Ujian Tengah Semester (UTS) mata kuliah Data Mining. Tujuan utamanya adalah membangun model klasifikasi yang mampu memprediksi nilai kualitas anggur berdasarkan fitur-fitur kimiawi yang tersedia. Model dilatih menggunakan data training berlabel, kemudian diterapkan untuk memprediksi kualitas pada data testing yang tidak memiliki label.
+
+## Informasi Repositori
+Repositori ini berisi hasil pengerjaan UTS Data Mining dengan studi kasus prediksi kualitas anggur menggunakan pendekatan machine learning. Model dibangun dari data training, dievaluasi, kemudian digunakan untuk memprediksi kualitas anggur pada data testing yang tidak memiliki label. Repositori ini berisi seluruh berkas yang dibutuhkan untuk mereproduksi proses analisis dari awal hingga menghasilkan file prediksi. Notebook disusun secara sistematis dengan penjelasan dan interpretasi di setiap tahapan sehingga dapat dipahami tanpa perlu menjalankan kode terlebih dahulu.
 
 ---
 
