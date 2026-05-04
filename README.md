@@ -140,6 +140,23 @@ Hasil prediksi kemudian disusun sesuai urutan template yang diberikan dan disimp
 
 ---
 
+## Kesimpulan
+ 
+Proyek ini berhasil membangun model klasifikasi kualitas anggur menggunakan Random Forest dengan akurasi cross validation sebesar **64.07%**. Beberapa poin penting yang dapat disimpulkan:
+ 
+1. **Performa model cukup baik untuk data yang tidak seimbang.** Distribusi kelas yang sangat miring (kelas 5 dan 6 mendominasi lebih dari 80% data) membuat klasifikasi kelas minoritas (3, 4, dan 8) menjadi sangat sulit. Akurasi 64% dalam kondisi seperti ini cukup reasonable.
+2. **Fitur kimiawi paling dominan adalah kadar alkohol.** Alcohol memiliki feature importance tertinggi (0.1418) dan korelasi tertinggi dengan quality (r = 0.44), menunjukkan bahwa kadar alkohol adalah prediktor paling kuat dalam menentukan kualitas anggur.
+3. **Model mengalami overfitting pada data training.** Gap antara akurasi training (100%) dan cross validation (64.07%) mengindikasikan overfitting. Ini adalah karakteristik umum Random Forest yang tidak dipangkas — model menghafal seluruh data training, namun performanya pada data baru jauh lebih rendah.
+4. **Prediksi data testing terpusat di kelas 5 dan 6.** Tidak ada satupun data testing yang diprediksi berkualitas 3, 4, atau 8. Hal ini wajar karena model cenderung bias ke kelas mayoritas akibat distribusi yang tidak seimbang.
+5. **StandardScaler tidak kritis untuk Random Forest**, namun tetap diterapkan sebagai praktik yang baik agar pipeline konsisten jika ingin dibandingkan dengan model berbasis jarak seperti KNN atau SVM.
+
+## Keterbatasan
+ 
+- **Ukuran dataset kecil:** Dengan hanya 857 sampel training, model mungkin tidak menangkap variasi data secara menyeluruh, terutama untuk kelas minoritas seperti quality 3 (6 sampel) dan quality 8 (13 sampel).
+- **Tidak ada validasi eksternal:** Evaluasi hanya dilakukan secara internal menggunakan cross validation. Performa pada dataset dari sumber atau kondisi produksi berbeda belum teruji.
+- **Label quality bersifat subjektif:** Nilai quality pada dataset ini merupakan hasil penilaian organoleptik (uji sensoris) oleh panel ahli, yang secara inheren memiliki tingkat subjektivitas tinggi dan berpotensi tidak konsisten antar penilai.
+
+  
 ## Format Output
 
 File hasil prediksi menggunakan separator titik koma (`;`) dan hanya memuat dua kolom sesuai ketentuan:
@@ -180,3 +197,22 @@ Total baris: 286 (sesuai jumlah data testing).
 | seaborn | Visualisasi statistik |
 | scikit-learn | Pembuatan dan evaluasi model machine learning |
 | joblib | Penyimpanan dan loading model |
+
+---
+ 
+## Referensi
+ 
+### Dataset
+- Cortez, P., Cerdeira, A., Almeida, F., Matos, T., & Reis, J. (2009). **Modeling wine preferences by data mining from physicochemical properties.** *Decision Support Systems*, 47(4), 547–553. https://doi.org/10.1016/j.dss.2009.05.016
+- UCI Machine Learning Repository — [Wine Quality Dataset](https://archive.ics.uci.edu/dataset/186/wine+quality)
+  
+### Algoritma & Metode
+- Breiman, L. (2001). **Random Forests.** *Machine Learning*, 45(1), 5–32. https://doi.org/10.1023/A:1010933404324
+- Pedregosa, F., et al. (2011). **Scikit-learn: Machine Learning in Python.** *Journal of Machine Learning Research*, 12, 2825–2830. https://jmlr.org/papers/v12/pedregosa11a.html
+
+### Dokumentasi Library
+- [scikit-learn Documentation — RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+- [scikit-learn Documentation — StratifiedKFold](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html)
+- [scikit-learn Documentation — StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html)
+- [pandas Documentation](https://pandas.pydata.org/docs/)
+- [joblib Documentation](https://joblib.readthedocs.io/en/stable/)
