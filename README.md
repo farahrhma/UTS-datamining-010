@@ -149,7 +149,7 @@ Total baris: 286 (sesuai jumlah data testing).
 4. Jalankan semua cell secara berurutan dari atas ke bawah (`Runtime > Run all`)
 5. File hasil prediksi akan otomatis terdownload setelah cell terakhir dijalankan
 
-**Catatan:** Sebelum menjalankan, ubah nilai `output_filename` di cell terakhir dengan mengganti `NIM` dengan 3 digit terakhir NIM Anda.
+**Catatan:** Sebelum menjalankan, ubah nilai `output_filename` di cell terakhir dengan mengganti `NIM` dengan 3 digit terakhir NIM saya yaitu 010.
 
 ---
 
