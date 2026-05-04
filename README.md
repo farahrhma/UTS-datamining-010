@@ -1,7 +1,9 @@
 # Wine Quality Classification - UTS Data Mining
 
 Nama : Farah Rahma Fakhira
+
 NIM : 2304020010
+
 Rombel : R1 Pendidikan Matematika 2023
 
 ## Pendahuluan
