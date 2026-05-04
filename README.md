@@ -1,5 +1,9 @@
 # Wine Quality Classification - UTS Data Mining
 
+Nama : Farah Rahma Fakhira
+NIM : 2304020010
+Rombel : R1 Pendidikan Matematika 2023
+
 ## Pendahuluan
 Kualitas anggur merupakan salah satu faktor kritis dalam industri minuman yang secara tradisional dinilai melalui proses pengujian organoleptik oleh para ahli (wine tasters). Proses penilaian tersebut bersifat subjektif, membutuhkan keahlian khusus, dan tidak efisien untuk dilakukan dalam skala besar. Seiring berkembangnya teknologi analisis kimiawi, kini dimungkinkan untuk mengukur berbagai senyawa kimia dalam anggur secara objektif dan terstandarisasi.
 
