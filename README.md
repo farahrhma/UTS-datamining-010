@@ -50,6 +50,12 @@ Data training yang digunakan dalam proyek ini terdiri dari 857 sampel dengan dis
 
 ---
 
+## Algoritma yang Digunakan: Random Forest Classifier
+Random Forest adalah algoritma ensemble learning yang membangun sejumlah besar pohon keputusan (decision tree) selama proses pelatihan dan menggabungkan hasil prediksi dari seluruh pohon tersebut untuk menghasilkan prediksi akhir. Pada tugas klasifikasi, prediksi akhir ditentukan berdasarkan suara mayoritas (majority voting) dari seluruh pohon. Algoritma ini bekerja dengan dua mekanisme utama:
+1) Bagging (Bootstrap Aggregating): Setiap pohon dilatih pada subset data training yang diambil secara acak dengan pengembalian (bootstrap sampling). Hal ini memastikan bahwa setiap pohon mendapatkan variasi data yang berbeda sehingga pohon-pohon tersebut tidak identik satu sama lain.
+2) Random Feature Selection: Pada setiap pemisahan node di dalam pohon, algoritma hanya mempertimbangkan sebagian kecil fitur yang dipilih secara acak (bukan seluruh fitur). Mekanisme ini mengurangi korelasi antar pohon dan meningkatkan keragaman ensemble.
+Dalam proyek ini, model dibangun dengan 500 pohon keputusan (`n_estimators=500`) untuk memastikan stabilitas hasil prediksi.
+
 ## Alur Pengerjaan
 
 ### Langkah 1: Persiapan Data
